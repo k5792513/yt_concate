@@ -1,5 +1,6 @@
 from yt_concate.pipeline.steps.get_video_list import GetVideoList
 from yt_concate.pipeline.steps.download_captions import DownloadCaptions
+from yt_concate.pipeline.steps.read_captions import ReadCaptions
 from yt_concate.pipeline.pipeline import Pipeline
 from yt_concate.pipeline.steps.preflight import Preflight
 from yt_concate.pipeline.steps.postflight import Postflight
@@ -17,6 +18,7 @@ def main():
         Preflight(),
         GetVideoList(),
         DownloadCaptions(),
+        ReadCaptions(),
         Postflight(),
     ]
 
